@@ -1,0 +1,138 @@
+h1 {
+    text-shadow: 0px 0px 10px #00ffff, 0px 0px 3px #00ffff;
+    box-shadow: 0px 0px 35px #00ff22, 0px 0px 35px #00ff22 inset;
+}
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: monospace;
+}
+
+/* header ul li ul.dropdown li a {  
+    position: relative;
+    text-align: center;
+} */
+
+.dropdown li a {
+    border: 1px #000000 solid;
+}
+
+/* header ul li ul.dropdown li ul.sub-dropdown {
+    display: none;
+} */
+
+header ul li ul.dropdown li ul.sub-dropdown {
+    display: none;
+}
+
+header ul li ul.dropdown li:hover ul.sub-dropdown {
+    display: block;
+}
+
+header ul li ul.dropdown li ul.sub-dropdown:hover a {
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+    color: #000000;
+    background: aquamarine;
+    box-shadow: 0px 0px 35px #00ffff, 0px 0px 15px #00ffff inset;
+    text-shadow: 0px 0px 10px #00ffff, 0px 0px 3px #00ffff;
+}
+
+/*  */
+
+ul {
+    list-style: none;
+    background: #22438C;
+}
+
+ul li {
+    display: inline-block;
+    position: relative;
+}
+
+ul li a {
+    display: block;
+    padding: 20px 25px;
+    color: #FFF;
+    text-decoration: none;
+    text-align: center;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+ul li ul.dropdown li {
+    display: block;
+}
+
+ul li ul.dropdown {
+    // width: 100%;
+    background: #22438C;
+    position: absolute;
+    z-index: 999;
+    display: none;
+}
+
+ul li a:hover {
+    background: #112C66;
+}
+
+ul li:hover ul.dropdown {
+    display: block;
+}
+
+
+
+/* TESTES MENU 2
+
+// Checkbox Hack
+#toggle-1 {
+    display:none;
+ }
+ 
+ label { 
+   -webkit-appearance: push-button;
+   -moz-appearance: button; 
+   display: inline-block;
+   cursor: pointer;
+   padding: 5px;
+ }
+ 
+//  CSS padrão da div
+ #mostra {
+    display:none;
+ }
+
+//  CSS padrão da tag a(âncora) do menu
+ #mostra a {
+    display: block;
+    padding: 25px;
+    border: 1px #000000 solid;
+    text-decoration: none;
+    color: #000000;
+    background: darkgray;
+ }
+
+//  CSS HOVER da tag a(âncora) do menu
+ #mostra:hover a {
+    display: flex;
+    padding: 25px;
+    border: #000000 solid;
+    text-decoration: none;
+    color: #ff0000;
+ }
+
+ 
+//  CSS quando o checkbox está marcado
+ #toggle-1:checked ~ #mostra {
+    display:block;
+ }
+
+ #toggle-1:hover ~ #mostra {
+    display:block;
+ }
+
+ */

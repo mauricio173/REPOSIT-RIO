@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu dropdown com efeito hover</title>
+    <style>
+.menubar{  
+    width: 90%;
+    padding:16px;
+    background-color: rgb(40, 43, 4);
+    /* background-color: gray; */
+    display: flex;
+    margin:0 auto;
+}
+.menu-dropdown {   
+    display: flex;
+    align-items: center;
+    margin: 0;
+    list-style-type: none;
+}
+.menu-dropdown .md-item{  
+    position: relative;   
+}
+.menu-dropdown .md-item:hover{ /* efeito hover nos itens do menu principal */
+    background-color:black;
+}
+.menu-dropdown .md-item a{
+    color: #fff; 
+    padding:16px;
+    text-decoration: none;
+    display: flex;
+}
+.menu-dropdown .md-item a:hover{ /* efeito hover nos links do menu principal */
+    background-color: rgb(243, 11, 11);
+    /* background-color: black; */
+}
+.submenu-dropdown{
+    display: none; /* esconde o submenu dropdown */
+    position: absolute;
+    width:100%;  
+}
+.sd-item:hover .submenu-dropdown{
+    display: flex;  
+}
+.submenu-dropdown .sd-item{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    left: 0;
+    top: 100%;
+    width: 100%;
+ }
+.submenu-dropdown .sd-item a{
+    width:100%;
+    padding:16px;
+    background-color: black;
+    color: #fff; 
+}
+.submenu-dropdown .sd-item a:hover { /* efeito hover nos itens do submenu dropdown */
+    background-color: rgb(0, 248, 12);
+    /* background-color: gray; */
+}
+.menu-dropdown .md-item:hover .submenu-dropdown{   /*efeito hover para alterar a cor de fundo*/
+    background-color: black; 
+    display: flex; /* exibir o submenu dropdown */
+}
+
+/*  */
+:root {
+    --cor-fundo: rgb(34, 41, 37);
+    --cor-hover: rgb(118, 180, 145);
+    --cor-primaria: rgb(231, 241, 236);
+}
+
+.dp-menu ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.dp-menu ul {
+    background-color: var(--cor-fundo);
+}
+
+.dp-menu ul li {
+    display: inline;
+    position: relative;
+}
+
+.dp-menu ul li a {
+    color: var(--cor-primaria);
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px;
+    transition: background .3s;
+}
+
+.dp-menu ul li a:hover {
+    background-color: var(--cor-hover);
+}
+
+/*sub menu*/
+.dp-menu ul ul {
+    display: none;
+    left: 0;
+    position: absolute;
+}
+
+.dp-menu ul li:hover ul {
+    display: block;
+}
+
+.dp-menu ul ul {
+    width: 150px
+}
+
+.dp-menu ul ul li a {
+    display: block;
+}
+</style>
+</head>
+<body>
+    <div class="menubar">
+        <ul class="menu-dropdown">
+            <li class="md-item">
+                <a href="">Menu</a>
+                <ul class="submenu-dropdown">
+                    <li class="sd-item">
+                        <a href="index.html">HomePage</a>
+                        <a href="index2.html">Opção 2b</a>
+                        <a href="index3.html">Opção 3b</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="md-item">
+                <a href="" class="menu-dropdown-item-link">Opção 2</a>
+                <ul class="submenu-dropdown">
+                    <li class="sd-item">
+                        <a href="">Opção 2a</a>
+                        <a href="">Opção 2b</a>
+                        <a href="">Opção 2c</a>
+                    </li>
+                </ul>
+            </li> 
+            <li class="md-item">
+                <a href="" class="menu-dropdown-item-link">Opção 3</a>
+                <ul class="submenu-dropdown">
+                    <li class="sd-item">
+                        <a href="">Opção 3a</a>
+                        <a href="">Opção 3b</a>
+                        <a href="">Opção 3c</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div><br><br><br><br><br><br><br>
+
+    <nav class="dp-menu">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Produtos</a>
+                <ul>
+                    <li><a href="#">Jogos</a></li>
+                    <li><a href="#">Filmes</a></li>
+                    <li><a href="#">Animes</a></li>
+                    <li><a href="#series">Séries</a></li>
+                    <li><a href="#">Notícias</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Contato</a></li>
+            <li><a href="#">Quem somos</a></li>
+        </ul>
+    </nav>
+</body>
+</html>

@@ -1,0 +1,91 @@
+//como esconder e mostrar menu usando apenas html e css?    
+/* Checkbox Hack */
+#toggle-1 {
+   display:none;
+}
+
+label { 
+  -webkit-appearance: push-button;
+  -moz-appearance: button; 
+  display: inline-block;
+  cursor: pointer;
+  padding: 5px;
+}
+
+/* CSS padrão da div */
+#mostra {
+   display:none;
+}
+
+/* CSS quando o checkbox está marcado */
+#toggle-1:checked ~ #mostra {
+   display:block;
+}
+
+<label for="toggle-1">
+  Clique aqui
+</label>
+<input type="checkbox" id="toggle-1">
+<div id="mostra">
+    Olá, mundo!
+</div>
+
+
+
+undefinedSource: https://stackoverflow.com/questions/261970
+------------------------------------------------------------
+//sintaxe do box-shadow em css?
+.test {
+    width: 400px;
+    height: 100px;
+    background-color: beige;
+    border-radius: 20px;
+    text-align: center;
+    font-size: 50px;
+    font-weight: 700;
+    padding-top: 20px;
+    box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.3)}
+
+
+
+
+undefinedSource: https://stackoverflow.com/questions/56084015
+------------------------------------------------------------
+//sintaxe do box-shadow em css?
+.test {
+    width: 400px;
+    height: 100px;
+    background-color: beige;
+    border-radius: 20px;
+    text-align: center;
+    font-size: 50px;
+    font-weight: 700;
+    padding-top: 20px;
+    box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.3)}
+
+
+
+
+    undefinedSource: https://stackoverflow.com/questions/56084015
+    <li><a href="">HTML</a></li>
+    <li><a href="">HTML</a></li>
+    <li><a href="">HTML</a></li>
+    <li><a href="">CSS</a></li>
+    <li><a href="">JAVA</a></li>
+------------------------------------------------------------
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
